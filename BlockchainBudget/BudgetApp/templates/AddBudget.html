@@ -1,0 +1,82 @@
+{% load static %}
+<html>
+<head>
+<title>Budget Tracking using Blockchain</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+ <script LANGUAGE="Javascript" >
+function validate(){
+	var x=document.forms["f1"]["t1"].value;
+	var y=document.forms["f1"]["t2"].value;
+	var c=document.forms["f1"]["t3"].value;
+	
+	if(x == null || x==""){
+		window.alert("Budget name must be enter");
+		document.f1.t1.focus();
+		return false;
+	}
+	if(y == null || y==""){
+		window.alert("Amount must be enter");
+		document.f1.t2.focus();
+		return false;
+	}
+	if(c == null || c==""){
+		window.alert("Description must be enter");
+		document.f1.t3.focus();
+		return false;
+	}
+	return true;
+}
+		
+	
+	</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">Budget Tracking using Blockchain</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+      <li><a href="{% url 'AddBudget' %}"><font size="" color="black">Add Budget Details</a></li>
+	  <li><a href="{% url 'TrackBudget' %}"><font size="" color="black">Track Your Budget</a></li>
+	  <li><a href="{% url 'index' %}"><font size="" color="black">Logout</a></li>		
+		</center></ul>
+<br class="clearfix" />
+				</div>
+			
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>	
+			<center>
+<form name="f1" method="post" action={% url 'AddBudgetAction' %} OnSubmit="return validate()">
+	{% csrf_token %}<br/>
+   <h3><b>Add New Budget Details Screen</b></h3>
+   
+	<font size="" color="blue"><center>{{ data|safe }}</center></font>
+						
+						<table align="center" width="80" >
+			 <tr><td><font size="" color="black">Budget&nbsp;Name</font></td><td><input type="text" name="t1" style="font-family: Comic Sans MS" size="40"/></td></tr>
+         
+		  
+		<tr><td><font size="" color="black">Max&nbsp;Amount</font></td><td><input type="text" name="t2" style="font-family: Comic Sans MS" size="20"/></td></tr>
+
+		
+		<tr><td><font size="" color="black">Budget&nbsp;Description</font></td><td><input type="text" name="t3" style="font-family: Comic Sans MS" size="60"/></td></tr>
+
+		         
+			<tr><td></td><td><input type="submit" value="Submit">
+			</td>
+			</table>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				</div>	
+					
+				</div>
+				
+	</body>
+</html>

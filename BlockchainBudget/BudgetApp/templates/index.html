@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+<head>
+<title>Budget Tracking using Blockchain</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">Budget Tracking using Blockchain</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+	  <li><a href="{% url 'index' %}"><font size="" color="black">Homepage</a></li>
+      <li><a href="{% url 'Login' %}"><font size="" color="black">User Login</a></li>
+	  <li><a href="{% url 'Register' %}"><font size="" color="black">Register Here</a></li>
+			
+		</center></ul>
+		<br class="clearfix" />
+	</div>
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>
+	<br/>
+	<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+		Abstract:-The project introduces an innovative approach to enhance financial management and transparency in both personal and organizational budgeting. Managing budgets effectively and maintaining financial integrity is a critical aspect of financial well-being. Traditional budgeting methods often lack transparency and are prone to errors and inconsistencies.
+</p>
+<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">This project leverages the power of blockchain technology to revolutionize the way budgets are tracked and managed. Blockchain, known for its immutable ledger and decentralized nature, provides a secure and tamper-proof platform for budget tracking. Each financial transaction or budgetary allocation is recorded as a transparent and time-stamped entry on the blockchain. </p>
+<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">This ledger is distributed across a network of nodes, ensuring that no single entity has control over the data, thereby eliminating the risk of data manipulation or fraud. Key features of the "Budget Tracking Using Blockchain" system include real-time updates of expenditures, automated notifications for budget limits, and the ability to share budgets securely with designated parties. Users can access their budgets through a user-friendly interface, making it easy to monitor spending and maintain financial discipline.</p>
+</body>
+</html>
